@@ -1,0 +1,19 @@
+# This package is also a valid DSH bundle: adding it to a profile's
+# `dsh.profile.bundles` list applies this insert on the next boot.
+# Do not combine that with install.sh, or the row is inserted twice.
+#
+# Every field below is optional; the defaults live in lib/classifier.js.
+# Example tuning:
+#
+# - insert:
+#     - id: auto-workspace
+#       name: dsh-auto-workspace
+#       config:
+#         mode: llm                 # llm | heuristic
+#         model: { provider: deepseek-account, model: deepseek-flash }
+#         workspaceRoot: /Users/you/Documents/deepseek-harness
+#         minConfidence: 0.55
+#         dryRun: false
+- insert:
+    - id: auto-workspace
+      name: dsh-auto-workspace

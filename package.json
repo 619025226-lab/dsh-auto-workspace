@@ -1,0 +1,33 @@
+{
+  "name": "dsh-auto-workspace",
+  "version": "0.6.1",
+  "private": true,
+  "description": "Automatically classifies each new DeepSeek Harness conversation into a workspace, creating one when the topic is new",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./classifier": "./lib/classifier.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "lib/classifier.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "license": "MIT"
+}
